@@ -11,5 +11,3 @@ N.B.:
 - I've only written the script for mac currently. Will do one for ubuntu when I remember.
 - Symlink script is very basic. Does not handle errors nor install. All in time.
 - May add flags in future. Watch this space.
-
-I wonder if this is detrimental to my career
