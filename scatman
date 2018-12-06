@@ -1,27 +1,30 @@
 #!/bin/bash
-say i am the scat man
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say i am the scat man
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
 
-say Ba-da-ba-da-ba-be bop bop bodda bope
-say Bop ba bodda bope
-say Be bop ba bodda bope
-say Bop ba bodda
-say Ba-da-ba-da-ba-be bop ba bodda bope
-say Bop ba bodda bope
-say Be bop ba bodda bope
-say Bop ba bodda bope
+VOICE=$1
 
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
+say -v $VOICE i am the scat man
+say -v $VOICE ski-bi dibby dib yo da dub dub
+say -v $VOICE yo da dub dub
+say -v $VOICE ski-bi dibby dib yo da dub dub
+say -v $VOICE yo da dub dub
+say -v $VOICE i am the scat man
+say -v $VOICE ski-bi dibby dib yo da dub dub
+say -v $VOICE yo da dub dub
+say -v $VOICE ski-bi dibby dib yo da dub dub
+
+say -v $VOICE Ba-da-ba-da-ba-be bop bop bodda bope
+say -v $VOICE Bop ba bodda bope
+say -v $VOICE Be bop ba bodda bope
+say -v $VOICE Bop ba bodda
+say -v $VOICE Ba-da-ba-da-ba-be bop ba bodda bope
+say -v $VOICE Bop ba bodda bope
+say -v $VOICE Be bop ba bodda bope
+say -v $VOICE Bop ba bodda bope
+
+say -v $VOICE ski-bi dibby dib yo da dub dub
+say -v $VOICE yo da dub dub
+say -v $VOICE ski-bi dibby dib yo da dub dub
+say -v $VOICE yo da dub dub
+say -v $VOICE ski-bi dibby dib yo da dub dub
+say -v $VOICE yo da dub dub
+say -v $VOICE ski-bi dibby dib yo da dub dub
