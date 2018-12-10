@@ -1,6 +1,6 @@
 #!/bin/bash
 echo Linking scatman script to /usr/local/bin
 result=$(pwd)
-sudo ln -s $result/scatman /usr/local/bin
+ln -s $result/scatman /usr/local/bin
 echo Done
 echo Open a new terminal to begin enjoying life
