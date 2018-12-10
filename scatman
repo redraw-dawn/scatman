@@ -1,27 +1,46 @@
 #!/bin/bash
-say i am the scat man
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say i am the scat man
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
 
-say Ba-da-ba-da-ba-be bop bop bodda bope
-say Bop ba bodda bope
-say Be bop ba bodda bope
-say Bop ba bodda
-say Ba-da-ba-da-ba-be bop ba bodda bope
-say Bop ba bodda bope
-say Be bop ba bodda bope
-say Bop ba bodda bope
+VOICE="$1"
 
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
-say yo da dub dub
-say ski-bi dibby dib yo da dub dub
+if [ -z $VOICE ]
+then
+    echo "The default voice is nice, but did you know others exist?"
+    echo "Here's the list..."
+    say -v '?'
+fi
+
+function sayWithVoice {
+    if [ -z $VOICE ]
+    then
+	say $@
+    else
+	say -v $VOICE $@
+    fi
+}
+
+sayWithVoice i am the scat man
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice i am the scat man
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+
+sayWithVoice Ba-da-ba-da-ba-be bop bop bodda bope
+sayWithVoice Bop ba bodda bope
+sayWithVoice Be bop ba bodda bope
+sayWithVoice Bop ba bodda
+sayWithVoice Ba-da-ba-da-ba-be bop ba bodda bope
+sayWithVoice Bop ba bodda bope
+sayWithVoice Be bop ba bodda bope
+sayWithVoice Bop ba bodda bope
+
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
