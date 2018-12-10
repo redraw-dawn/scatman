@@ -1,30 +1,46 @@
 #!/bin/bash
 
-VOICE=$1
+VOICE="$1"
 
-say -v $VOICE i am the scat man
-say -v $VOICE ski-bi dibby dib yo da dub dub
-say -v $VOICE yo da dub dub
-say -v $VOICE ski-bi dibby dib yo da dub dub
-say -v $VOICE yo da dub dub
-say -v $VOICE i am the scat man
-say -v $VOICE ski-bi dibby dib yo da dub dub
-say -v $VOICE yo da dub dub
-say -v $VOICE ski-bi dibby dib yo da dub dub
+if [ -z $VOICE ]
+then
+    echo "The default voice is nice, but did you know others exist?"
+    echo "Here's the list..."
+    say -v '?'
+fi
 
-say -v $VOICE Ba-da-ba-da-ba-be bop bop bodda bope
-say -v $VOICE Bop ba bodda bope
-say -v $VOICE Be bop ba bodda bope
-say -v $VOICE Bop ba bodda
-say -v $VOICE Ba-da-ba-da-ba-be bop ba bodda bope
-say -v $VOICE Bop ba bodda bope
-say -v $VOICE Be bop ba bodda bope
-say -v $VOICE Bop ba bodda bope
+function sayWithVoice {
+    if [ -z $VOICE ]
+    then
+	say $@
+    else
+	say -v $VOICE $@
+    fi
+}
 
-say -v $VOICE ski-bi dibby dib yo da dub dub
-say -v $VOICE yo da dub dub
-say -v $VOICE ski-bi dibby dib yo da dub dub
-say -v $VOICE yo da dub dub
-say -v $VOICE ski-bi dibby dib yo da dub dub
-say -v $VOICE yo da dub dub
-say -v $VOICE ski-bi dibby dib yo da dub dub
+sayWithVoice i am the scat man
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice i am the scat man
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+
+sayWithVoice Ba-da-ba-da-ba-be bop bop bodda bope
+sayWithVoice Bop ba bodda bope
+sayWithVoice Be bop ba bodda bope
+sayWithVoice Bop ba bodda
+sayWithVoice Ba-da-ba-da-ba-be bop ba bodda bope
+sayWithVoice Bop ba bodda bope
+sayWithVoice Be bop ba bodda bope
+sayWithVoice Bop ba bodda bope
+
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
+sayWithVoice yo da dub dub
+sayWithVoice ski-bi dibby dib yo da dub dub
