@@ -3,4 +3,3 @@ echo Linking scatman script to /usr/local/bin
 result=$(pwd)
 ln -s $result/scatman /usr/local/bin
 echo Done
-echo Open a new terminal to begin enjoying life
